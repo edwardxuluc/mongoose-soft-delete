@@ -1,0 +1,16 @@
+{
+  "name": "mongoose-soft-delete",
+  "version": "1.0.0",
+  "description": "Mongoose soft delete",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mongoose",
+    "soft",
+    "delete"
+  ],
+  "author": "Edward Paulino Xuluc Chulim",
+  "license": "MIT"
+}
