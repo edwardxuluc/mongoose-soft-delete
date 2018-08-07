@@ -1,2 +1,1 @@
-# Angular form group
-Mongoose for soft delete
+# Mongoose for soft delete
