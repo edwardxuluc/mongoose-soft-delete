@@ -1,13 +1,8 @@
-var mongoose = require('mongoose'),
-    Schema = mongoose.Schema,
-    Model = mongoose.Model,
-    util = require('util');
+var mongoose = require('mongoose');
+var util     = require('util');
+var Schema   = mongoose.Schema;
+var Model    = mongoose.Model;
 
-/**
- * This code is taken from official mongoose repository
- * https://github.com/Automattic/mongoose/blob/master/lib/query.js#L1996-L2018
- */
-/* istanbul ignore next */
 function parseUpdateArguments (conditions, doc, options, callback) {
     if ('function' === typeof options) {
         // .update(conditions, doc, callback)
