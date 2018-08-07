@@ -1,6 +1,6 @@
 {
   "name": "mongoose-soft-delete-ex",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Mongoose soft delete adding timestamp, overwriting the methods 'count, find, findOne, indOneAndUpdate, update' and adding the method 'restore'",
   "main": "index.js",
   "scripts": {
