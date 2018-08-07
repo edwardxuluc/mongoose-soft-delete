@@ -1,7 +1,7 @@
 {
-  "name": "mongoose-soft-delete",
+  "name": "mongoose-soft-delete-ex",
   "version": "1.0.0",
-  "description": "Mongoose soft delete",
+  "description": "Mongoose soft delete adding timestamp, overwriting the methods 'count, find, findOne, indOneAndUpdate, update' and adding the method 'restore'",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,7 +9,10 @@
   "keywords": [
     "mongoose",
     "soft",
-    "delete"
+    "delete",
+    "overwriting",
+    "methods",
+    "restore"
   ],
   "author": "Edward Paulino Xuluc Chulim",
   "license": "MIT"

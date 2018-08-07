@@ -71,16 +71,14 @@ function createSchemaObject (typeKey, typeValue, options) {
     return options;
 }
 
-module.exports = function( schema, options ){
-    var options = options || {};
-    var typeKey = schema.options.typeKey;
-    var methods = ['count', 'find', 'findOne', 'findOneAndUpdate', 'update'];
+module.exports = function mongooseSoftDelete( schema, options ){
+    var options     = options || {};
+    var typeKey     = schema.options.typeKey;
+    var indexFields = parseIndexFields(options);
+    var methods     = ['count', 'find', 'findOne', 'findOneAndUpdate', 'update'];
 
     schema.add({ deleted : createSchemaObject(typeKey, Boolean, { default: false, index: indexFields.deleted }) });
-
-    if( options.deletedAt === true ){
-        schema.add({ deletedAt: createSchemaObject(typeKey, Date, { index: indexFields.deletedAt }) });
-    }
+    schema.add({ deletedAt: createSchemaObject(typeKey, Date, { index: indexFields.deletedAt }) });
 
     if( options.deletedBy === true ){
         schema.add({ deletedBy: createSchemaObject(typeKey, options.deletedByType || Schema.Types.ObjectId, { index: indexFields.deletedBy }) });
